@@ -1,7 +1,7 @@
 ---
 name: New Sprint Item
 about: add task/work on project
-title: "[Sprint] "
+title: "[Sprint] your short title here"
 labels: Sprint
 assignees: ''
 
