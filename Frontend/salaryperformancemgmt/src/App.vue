@@ -5,39 +5,27 @@
       color="primary"
       dark
     >
-      <div class="d-flex align-center">
-        <v-img
-          alt="Vuetify Logo"
-          class="shrink mr-2"
-          contain
-          src="https://cdn.vuetifyjs.com/images/logos/vuetify-logo-dark.png"
-          transition="scale-transition"
-          width="40"
-        />
+    <img src="./assets/federated-icon.png" />
 
-        <v-img
-          alt="Vuetify Name"
-          class="shrink mt-1 hidden-sm-and-down"
-          contain
-          min-width="100"
-          src="https://cdn.vuetifyjs.com/images/logos/vuetify-name-dark.png"
-          width="100"
-        />
-      </div>
 
-      <v-spacer></v-spacer>
+    <v-spacer></v-spacer>
 
-      <v-btn
-        href="https://github.com/vuetifyjs/vuetify/releases/latest"
-        target="_blank"
-        text
-      >
-        <span class="mr-2">Latest Release</span>
-        <v-icon>mdi-open-in-new</v-icon>
+      <v-btn icon class="teal">
+        <v-icon>mdi-account</v-icon>
       </v-btn>
+      <v-btn icon>
+        <v-icon color="grey darken-4">mdi-cogs</v-icon>
+      </v-btn>  
+      <v-btn icon>
+        <v-icon color="grey darken-4">mdi-bell</v-icon>
+      </v-btn> 
+      <v-btn icon>
+        <v-icon color="grey darken-4">mdi-logout</v-icon>
+      </v-btn>   
     </v-app-bar>
 
     <v-content>
+      <Sidebar></Sidebar>
       <HelloWorld/>
     </v-content>
   </v-app>
@@ -45,12 +33,15 @@
 
 <script>
 import HelloWorld from './components/HelloWorld';
+import Sidebar from './components/shared/sidebar.vue';
+
 
 export default {
   name: 'App',
 
   components: {
     HelloWorld,
+    Sidebar
   },
 
   data: () => ({
@@ -58,3 +49,10 @@ export default {
   }),
 };
 </script>
+
+<style>
+body, html {
+  height: 100%;
+  width: 100%;
+}
+</style>
