@@ -1,37 +1,50 @@
-## Welcome to GitHub Pages
+## Product Backlog
+|No| Project Backlog                      | Priority(10)     | Difficulty      |
+|--| -----------                          | -----------      | -----------     | 
+|1.| ERD Diagram                          | 10               | 3000            | 
+|2.| Mock Data Creation                   | 8                | 500             | 
+|3.| Database Design(MS SQL)              | 8                | 9000            | 
+|4.| Authentication/Security              | 7                | 5000            | 
+|5.| Prototyping/Design UI                | 10               | 7000            | 
+|6.| Code GUI Frontend(HTML/CSS/JS)       | 8                | 15000           | 
+|7.| Design UML                           | 9                | 3000            |   
+|8.| Design/Code Backend with C#          | 6                | 25000           | 
+|9.| Code Testing and Review              | 8                | 4500            |   
+|10.| Deployment Azure/IIS                | 4                | 1000            |   
 
-You can use the [editor on GitHub](https://github.com/yohanneshabte/SalaryPerformanceMgmt/edit/master/README.md) to maintain and preview the content for your website in Markdown files.
+***
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
+## Sprint Backlog 1 
+### Feb 4 - Feb 11
+|No| Sprint Backlog                        | All Related Issues                     | Who | Completed |
+|--| --                                    |  -----------                           | ----------- | ---- |
+|1.|ERD Diagram                            | [ERD](../issues?q=label%3A"ERD")       | [Zelalem](https://github.com/zele123) |  Yes   |
+|2.|Prototyping/Design UI                  | [GUI](../issues?q=label%3A"GUI") | [Thau Tran](https://github.com/ThauTran)  |  Yes   |
+|3.|Design UML                             | [UML](../issues?q=label%3A"UML") | [Evan](https://github.com/Evan-Sack) |  Yes   |
+|4.|Code GUI Frontend(UI with HTML/CSS)    | [GUI](../issues?q=label%3A"GUI") | [Asutosh](https://github.com/raswa634) |  Yes   |
+|5.|Database Design(MS SQL)                | [DB](../issues?q=label%3A"DB") | [Michael](https://github.com/Mikehira), [Yohannes](https://github.com/yohanneshabte) |  Yes   |
 
-### Markdown
 
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
+## Sprint Backlog 2 
+### Feb 15 - Feb 27
+|No| Sprint Backlog                        | All Related Issues                     | Who | Completed |
+|--| --                                    |  -----------                           | ----------- | ---- |
+|1.|Developing Backend Framework And improving ERD  | [ERD](../issues?q=label%3A"ERD")       | [Zelalem](https://github.com/zele123) |  Yes   |
+|2.|Design GUI on UXPIN - Improving the last GUI  | [GUI](../issues?q=label%3A"GUI") | [Thau Tran](https://github.com/ThauTran)  |  Yes   |
+|3.|Working on errors and updating class diagram  | [UML](../issues?q=label%3A"UML") | [Evan](https://github.com/Evan-Sack) |  Yes   |
+|4.| Developing Frontend Framework(signin) | [GUI](../issues?q=label%3A"GUI") | [Asutosh](https://github.com/raswa634) |  Yes   |
+|5.| Mock data and updating database with improved ERD  | [DB](../issues?q=label%3A"DB") | [Michael](https://github.com/Mikehira) |  Yes   |
+|6.|Create frontend components using Vue | [GUI](../issues?q=label%3A"GUI") | [Yohannes](https://github.com/yohanneshabte) |  Yes   |
 
-```markdown
-Syntax highlighted code block
 
-# Header 1
-## Header 2
-### Header 3
 
-- Bulleted
-- List
-
-1. Numbered
-2. List
-
-**Bold** and _Italic_ and `Code` text
-
-[Link](url) and ![Image](src)
-```
-
-For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
-
-### Jekyll Themes
-
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/yohanneshabte/SalaryPerformanceMgmt/settings). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
-
-### Support or Contact
-
-Having trouble with Pages? Check out our [documentation](https://help.github.com/categories/github-pages-basics/) or [contact support](https://github.com/contact) and we’ll help you sort it out.
+## Sprint Backlog 3 (Current)
+### Feb 28 - Mar 5
+|No| Sprint Backlog                        | All Related Issues                     | Who | Completed |
+|--| --                                    |  -----------                           | ----------- | ---- |
+|1.|    Setup Controller for REST API      | [BackEnd](../issues?q=label%3A"Backend+C%23")       | [Zelalem](https://github.com/zele123) |  No   |
+|2.|                  | [GUI](../issues?q=label%3A"GUI") | [Thau Tran](https://github.com/ThauTran)  |  No   |
+|3.|  Work on DTOs  | [BackEnd](../issues?q=label%3A"Backend+C%23") | [Evan](https://github.com/Evan-Sack) |  No   |
+|4.|   | [GUI](../issues?q=label%3A"GUI") | [Asutosh](https://github.com/raswa634) |  No   |
+|5.| Setup Models | [BackEnd](../issues?q=label%3A"Backend+C%23")  | [Michael](https://github.com/Mikehira) |  No   |
+|6.|Code Employee page and Setup Router | [DB](../issues?q=label%3A"DB") | [Yohannes](https://github.com/yohanneshabte) |  No   |
