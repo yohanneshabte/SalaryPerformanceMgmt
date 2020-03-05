@@ -1,7 +1,8 @@
 <template>
   <v-card class="ml-12">
-    <v-card-title>
-      Employee List
+    <v-card-title  class="pb-0 pt-0 black lighten-1 white--text">
+      <v-icon color="grey lighten-5" class="mr-6">mdi-account-group</v-icon>
+      EMPLOYEE LIST
       <v-spacer></v-spacer>
       <v-text-field 
         v-model="search"
@@ -9,6 +10,7 @@
         label="Search"
         single-line
         hide-details
+        class="ma-0 mb-4"
       ></v-text-field>
     </v-card-title>
     <v-data-table
@@ -16,8 +18,18 @@
       :items="employees"
       :search="search"
     >
-        <template v-slot:item.photo="{ item }">
-        <v-avatar color="blue" size="28"><span class="white--text">{{ item.sn }}</span></v-avatar>
+        <template v-slot:item.photo="{  }">
+          <v-avatar size="28"><v-img src="./../../assets/image-11.png" /></v-avatar>
+        </template>
+        <template v-slot:item.approval="{}">
+          <v-row>
+            <v-col cols="6">
+          <v-btn rounded color="success" x-small><v-icon >mdi-check</v-icon></v-btn>
+            </v-col>
+            <v-col cols="6">
+          <v-btn rounded color="error" x-small><v-icon >mdi-close</v-icon></v-btn>
+            </v-col>
+          </v-row>
         </template>
     </v-data-table>
         
@@ -40,11 +52,16 @@
           },
           { text: 'Employee ID', value: 'employeeID' },
           { text: 'Full Name', value: 'fullName' },
-          { text: 'Email', value: 'email' },
-          { text: 'Department', value: 'dept' },
-          { text: 'Title', value: 'title' },
-          { text: 'PR', value: 'pr' },
-          { text: 'Salary', value: 'salary' },
+          { text: 'Title', value: 'email' },
+          { text: 'Last PR', value: 'dept' },
+          { text: 'Current PR', value: 'title' },
+          { text: 'Salary', value: 'pr' },
+          { text: 'Raise', value: 'salary' },
+          {
+            text: 'PR Approval',
+            sortable: false,
+            value: 'approval',
+          },
         ],
         employees: [
           {
@@ -56,7 +73,7 @@
             title: 'Supervisor',
             pr: 'OP',
             salary: '$90,000',
-            sn: 'JT',
+            sn: '',
           },
           {
             photo: '',
@@ -67,7 +84,7 @@
             title: 'Information Security Engineer 1',
             pr: 'OP',
             salary: '$45,000',
-            sn: 'PM',
+            sn: './../../assets/image-4.png',
           },
           {
             photo: '',
