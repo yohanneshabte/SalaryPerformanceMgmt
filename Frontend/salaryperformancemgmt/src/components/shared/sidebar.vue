@@ -1,5 +1,6 @@
 <template>
-  <v-navigation-drawer permanent fixed  class="grey darken-4" style="top: 64px">
+  <v-navigation-drawer permanent fixed expand-on-hover  mini-variant
+          mini-variant-width="65" class="grey darken-4" style="top: 64px">
       <v-list-item dense to="/">
         <v-list-item-content>
           <v-list-item-title class="title">
