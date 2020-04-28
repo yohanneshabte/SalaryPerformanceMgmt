@@ -9,8 +9,8 @@
 
     <v-spacer></v-spacer>
 
-      <v-btn icon class="teal">
-        <v-icon>mdi-account</v-icon>
+      <v-btn icon elevation="4" to="/employee">
+        <v-img src="./../../assets/image-4.png" height="50" contain/>
       </v-btn>
       <v-btn icon>
         <v-icon color="grey darken-4">mdi-cogs</v-icon>

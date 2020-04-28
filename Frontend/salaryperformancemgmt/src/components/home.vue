@@ -1,7 +1,7 @@
 <template>
-  <v-container class="py-0" style="margin-left: 256px; margin-top: 100px">
+  <v-container class="py-0 pl-0" style="margin-left: 100px; margin-top: 20px">
    <v-row>
-    <v-col cols="10">
+    <v-col cols="10" no-gutters>
     <router-view />
     </v-col>
    </v-row>

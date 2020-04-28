@@ -1,7 +1,7 @@
 <template>
   <v-app id="inspire">
     <v-content>
-        <v-row>
+        <v-row >
           
        
         <v-col
@@ -10,7 +10,7 @@
           align="center"
           justify="center"
         >
-          <v-card class="elevation-12" style= "min-height: 100vh; background: linear-gradient(45deg, #080303 0%, #080303 0%, #000000 30%, #cc1616 100% );">
+          <v-card class="" style= "min-height: 100vh; background: linear-gradient(45deg, #080303 0%, #080303 0%, #000000 30%, #cc1616 100% );">
             <v-img 
               src ="./../../assets/logo.png"
               height="200"
@@ -24,7 +24,7 @@
           cols="4"
           id="login"
         >
-          <v-card :elevation="12" style= "min-width: 80vh; min-height: 60vh">
+          <v-card  style= "min-width: 80vh; min-height: 80vh">
     
               <v-card-text class="title text-center"> Employee Login
                 <v-form style="margin-top:70px">
@@ -67,8 +67,7 @@
 <style scoped>
 
 #login {
-  margin-top: 20vh;
-  margin-left:25vh;
+  
 }
 
 #federated {
