@@ -1,14 +1,14 @@
-using System;
+﻿using System;
 using System.Data;
 using System.Data.SqlClient;
 using System.Diagnostics;
 
-namespace salaryMgmt.Gateway
+namespace salaryMgmt.Config.Gateway
 {
     public class DatabaseGateway
     {
-        
-        SqlConnection connection;
+        private string connectionString = "";
+        public SqlConnection connection;
         public DatabaseGateway()
         {
             connection = new SqlConnection(connectionString);
@@ -28,15 +28,10 @@ namespace salaryMgmt.Gateway
             }
         }
 
-        public SqlDataReader getEmployees()
-        {
-            SqlDataReader dr;
-            SqlCommand cmd = new SqlCommand("GuiFormVersionOne", connection);
-            cmd.CommandType = CommandType.StoredProcedure;
-      
-            dr = cmd.ExecuteReader();
-            return dr;
-        }
+        
+
+
+
 
         public void CloseConnection()
         {
