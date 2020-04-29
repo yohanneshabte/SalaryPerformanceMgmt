@@ -1,6 +1,6 @@
 <template>
   <v-navigation-drawer permanent fixed expand-on-hover  mini-variant
-          mini-variant-width="65" class="grey darken-4" style="top: 64px">
+          mini-variant-width="65" class="grey darken-4" style="top: 64px" v-show="dashboard">
       <v-list-item dense to="/">
         <v-list-item-content>
           <v-list-item-title class="title">
@@ -43,14 +43,25 @@
     name: 'sidebar',
     data () {
       return {
+        dashboard: this.$route.path=='/dashboard'?false:true,
         items: [
           { title: 'Dashboard', icon: 'mdi-view-dashboard', link: '/dashboard' },
           { title: 'Salary Budget', icon: 'mdi-chart-areaspline', link: '/budget' },
           { title: 'Forms', icon: 'mdi-format-line-weight', link: '/forms' },
           { title: 'Performance', icon: 'mdi-account-multiple', link: '/performance' },
           { title: 'Salary', icon: 'mdi-cash', link: '/salary' },
+          { title: 'Team', icon: 'mdi-microsoft-teams', link: '/teams' },
         ],
       }
     },
+    watch: {
+    // call again the method if the route changes
+      '$route': 'fetchData'
+    },
+    methods: {
+      fetchData () {
+        this.dashboard = this.$route.path=='/dashboard'?false:true;
+      }
+    }
   }
 </script>

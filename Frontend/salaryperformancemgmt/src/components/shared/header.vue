@@ -16,7 +16,13 @@
         <v-icon color="grey darken-4">mdi-cogs</v-icon>
       </v-btn>  
       <v-btn icon>
-        <v-icon color="grey darken-4">mdi-bell</v-icon>
+        <v-badge
+        color="error"
+        content="4"
+        overlap
+        >
+          <v-icon color="grey darken-4">mdi-bell</v-icon>
+        </v-badge>
       </v-btn> 
       <v-btn icon>
         <v-icon color="grey darken-4">mdi-logout</v-icon>

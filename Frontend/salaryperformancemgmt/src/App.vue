@@ -13,6 +13,7 @@ import Header from './components/shared/header.vue';
 import Home from './components/home.vue';
 import Sidebar from './components/shared/sidebar.vue';
 
+//import {mapState} from 'vuex';
 
 export default {
   name: 'App',
@@ -28,6 +29,9 @@ export default {
   data: () => ({
     //
   }),
+  created () {
+    
+  }
 };
 </script>
 

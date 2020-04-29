@@ -46,17 +46,22 @@
   </v-card> -->
 <v-container>
   <v-row no-gutters>
-    <v-col cols="12" no-gutters class="emp-nav">
-    <v-toolbar>
-      <v-btn rounded class="ma-2 pl-0 pr-0" color="blue" large width="250" right>
-       <v-avatar size="40" left>
+    <v-toolbar dense class="mb-12">
+      <v-toolbar-title>Employee Management</v-toolbar-title>
+      <v-spacer></v-spacer>
+      <v-toolbar-title>Home > Employee Management</v-toolbar-title>
+    </v-toolbar>
+    <v-col cols="11" no-gutters class="emp-nav ml-12">
+    <v-toolbar dense color="grey darken-3" class="ml-12">
+      <v-btn class="ma-2 pl-0 pr-0" color="blue" width="250" right>
+       <v-avatar size="30" left>
       <img src="./../../assets/image-4.png" /> 
       </v-avatar>
       Peter H. Atkins
       <v-icon right>mdi-dots-vertical</v-icon>
       </v-btn>
-      <v-btn rounded class="ma-2 pl-0 pr-0" outlined color="blue" large width="250" right>
-       <v-avatar size="40" left>
+      <v-btn rounded class="ma-2 pl-0 pr-0" outlined color="blue" width="250" right>
+       <v-avatar size="30" left>
       <img src="./../../assets/image-5.png" /> 
       </v-avatar>
       Candy J. Whitefield
@@ -67,7 +72,7 @@
     </v-col>
   </v-row>
   <v-row>
-    <v-col cols="3">
+    <v-col cols="3" class="pl-0">
       <v-card
         max-width="344"
         class="mx-auto employee-card"

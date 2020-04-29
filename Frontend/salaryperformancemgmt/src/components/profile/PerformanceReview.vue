@@ -2,20 +2,49 @@
  <v-container no-gutters>
  <v-btn tile flat dark width="250" elevation="0">Performance Review</v-btn>
  <v-row no-gutters>
-    <v-col cols="2">
-        
+    <v-col cols="2"> 
         <v-sheet
         class="emp-sheet"
         height="350"
         tile="false"
+        v-if="showPastPR"
         >
-            <v-btn block tile height="45" class="pa-0 white--text font-weight-bold" color="blue accent-3" elevation="0">Last Projected PR</v-btn>
+            <v-btn block tile height="45" class="pa-0 white--text font-weight-bold" color="blue accent-2" elevation="0">Last PR</v-btn>
             <v-sheet height="70"></v-sheet>
             <v-text class="display-4 light-blue--text lighten-1">EC</v-text>
-            <v-sheet height="103"></v-sheet>
+            <v-sheet height="30"></v-sheet>
+            <v-btn 
+            color="grey darken-2"
+            class="white--text"
+            tile
+            height="20"
+            v-on:click="togglePastPR"
+            >
+            <v-icon left>mdi-eye-off</v-icon>
+            Hide Past PR
+            </v-btn>
+            <v-sheet height="48"></v-sheet>
             <v-btn tile elevation="0" block color="white" v-on:click="toggleHistory">
                 <v-icon left>{{historyIcon}}</v-icon>
                 <v-text class="font-weight-light">Performance Review History</v-text>
+            </v-btn>
+        </v-sheet>
+        <v-sheet
+        class="emp-sheet past-pr"
+        color="white"
+        height="350" 
+        v-else>
+            <v-sheet height="145"></v-sheet>
+            <v-btn 
+            color="grey darken-2"
+            class="white--text"
+            tile
+            block
+            x-large
+            v-on:click="togglePastPR"
+            >
+            <v-icon left>mdi-history</v-icon>
+            Show Past PR
             </v-btn>
         </v-sheet>
     </v-col>
@@ -436,6 +465,7 @@ export default {
             prhistory: false,
             historyIcon: 'mdi-chevron-down',
             detailIcon: 'mdi-chevron-right',
+            showPastPR: false,
         }
     },
     methods: {
@@ -467,6 +497,12 @@ export default {
                 this.extraDetails2 = false;
             }
         },
+        togglePastPR: function() {
+            if(!this.showPastPR)
+                this.showPastPR = true;
+            else
+                this.showPastPR = false;
+        }
     },
 }
 </script>
