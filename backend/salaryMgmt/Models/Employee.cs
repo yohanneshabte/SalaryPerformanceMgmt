@@ -3,6 +3,10 @@ using System.Data;
 using System.Data.SqlClient;
 using salaryMgmt.DTOs;
 using salaryMgmt.Config.Gateway;
+using System.Data;
+using System.Data.SqlClient;
+using salaryMgmt.DTOs;
+using salaryMgmt.Config.Gateway;
 
 namespace salaryMgmt.Models
 {
