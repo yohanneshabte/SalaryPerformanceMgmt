@@ -8,6 +8,7 @@
   <ItemGroup>
     <PackageReference Include="System.Data.SqlClient" Version="4.8.1" />
     <PackageReference Include="WindowsAzure.Storage" Version="9.3.3" />
+    <PackageReference Include="Json.Net" Version="1.0.21" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Models\" />

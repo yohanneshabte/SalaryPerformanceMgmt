@@ -2,6 +2,15 @@
   "version": 3,
   "targets": {
     ".NETCoreApp,Version=v3.1": {
+      "Json.Net/1.0.21": {
+        "type": "package",
+        "compile": {
+          "lib/netstandard2.0/Json.Net.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/Json.Net.dll": {}
+        }
+      },
       "Microsoft.CSharp/4.3.0": {
         "type": "package",
         "dependencies": {
@@ -1532,6 +1541,18 @@
     }
   },
   "libraries": {
+    "Json.Net/1.0.21": {
+      "sha512": "1WNtS47qjiqE9uJjZPc/YSmyfu6aoPP9jyyJUa0l2yx/S6U3H0+ZqWyowrRJoXU0jSbODMgS0b0x4tYDYuJwRA==",
+      "type": "package",
+      "path": "json.net/1.0.21",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "json.net.1.0.21.nupkg.sha512",
+        "json.net.nuspec",
+        "lib/netstandard2.0/Json.Net.dll"
+      ]
+    },
     "Microsoft.CSharp/4.3.0": {
       "sha512": "P+MBhIM0YX+JqROuf7i306ZLJEjQYA9uUyRDE+OqwUI5sh41e2ZbPQV3LfAPh+29cmceE1pUffXsGfR4eMY3KA==",
       "type": "package",
@@ -5656,31 +5677,30 @@
   },
   "projectFileDependencyGroups": {
     ".NETCoreApp,Version=v3.1": [
+      "Json.Net >= 1.0.21",
       "System.Data.SqlClient >= 4.8.1",
       "WindowsAzure.Storage >= 9.3.3"
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Sol\\.nuget\\packages\\": {}
+    "/Users/user2/.nuget/packages/": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Sol\\Desktop\\salaryMgmt\\salaryMgmt\\salaryMgmt.csproj",
+      "projectUniqueName": "/Users/user2/Documents/2020/IT380/SalaryPerformanceMgmt/backend/salaryMgmt/salaryMgmt.csproj",
       "projectName": "salaryMgmt",
-      "projectPath": "C:\\Users\\Sol\\Desktop\\salaryMgmt\\salaryMgmt\\salaryMgmt.csproj",
-      "packagesPath": "C:\\Users\\Sol\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Sol\\Desktop\\salaryMgmt\\salaryMgmt\\obj\\",
+      "projectPath": "/Users/user2/Documents/2020/IT380/SalaryPerformanceMgmt/backend/salaryMgmt/salaryMgmt.csproj",
+      "packagesPath": "/Users/user2/.nuget/packages/",
+      "outputPath": "/Users/user2/Documents/2020/IT380/SalaryPerformanceMgmt/backend/salaryMgmt/obj/",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\Sol\\AppData\\Roaming\\NuGet\\NuGet.Config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        "/Users/user2/.config/NuGet/NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "netcoreapp3.1"
       ],
       "sources": {
-        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
@@ -5697,6 +5717,10 @@
     "frameworks": {
       "netcoreapp3.1": {
         "dependencies": {
+          "Json.Net": {
+            "target": "Package",
+            "version": "[1.0.21, )"
+          },
           "System.Data.SqlClient": {
             "target": "Package",
             "version": "[4.8.1, )"
@@ -5724,7 +5748,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.101\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/3.1.200/RuntimeIdentifierGraph.json"
       }
     }
   }

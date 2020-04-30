@@ -7,6 +7,8 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 using salaryMgmt.Models;
 using Microsoft.AspNetCore.Http;
+using Newtonsoft.Json;
+using Newtonsoft.Json.Serialization;
 
 namespace salaryMgmt.Controllers
 {
@@ -15,6 +17,8 @@ namespace salaryMgmt.Controllers
     public class EmployeeController : ControllerBase
     {
         private Employee newEmp;
+        private Employees myEmployees;
+
         private readonly ILogger<EmployeeController> _logger;
 
         public EmployeeController(ILogger<EmployeeController> logger)
@@ -28,19 +32,22 @@ namespace salaryMgmt.Controllers
         {
             //newEmp = new Employee(id);
             string[] results = { "Janet", "Townsend", "C.", "3244 Lake Street", "432-54-2355", "janettownsend@federated.com", "Supervisor", "SC+", "$125,000" };
-            //results[0] = newEmp.EmpDTO.FirstName;
-            //results[1] = newEmp.EmpDTO.LastName;
-            //results[2] = newEmp.EmpDTO.MiddleInitial;
-            //results[3] = newEmp.EmpDTO.EmployeeAddress;
-            //results[4] = newEmp.EmpDTO.EmplooyeeSSN;
-            //results[5] = newEmp.EmpDTO.EmployeeEmail;
-            //results[7] = newEmp.EmpDTO.CurrentPR;
-            //results[8] = newEmp.EmpDTO.CurrentSalary;
-            //results[6] = newEmp.EmpDTO.EmployeeTitle;
+            newEmp = new Employee(id);
 
-            return Ok("firstName:" + results[0] + "\nlastName" + results[1] + "\nmiddleName" + results[2]
-                    + "\nempAddress" + results[3] + "\nempSSN" + results[4] + "\nempEmail" + results[5]
-                    + "\nempTitle" + results[6] + "\ncurrentPR" + results[7] + "\ncurrentSal" + results[8]);
+            return Ok(newEmp);
+
+        }
+
+        [HttpGet]
+        [Route("{id}/all")]
+        public IActionResult GetMyEmployees(int id)
+        {
+            //newEmp = new Employee(id);
+            
+            myEmployees = new Employees(id);
+
+            return Ok(myEmployees);
+
         }
 
         [HttpGet]

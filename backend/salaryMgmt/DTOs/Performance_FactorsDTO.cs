@@ -11,6 +11,5 @@ namespace salaryMgmt.Models
         public string FACTOR_NAME { get; set; }
         public string FACTOR_DIMENSIONS { get; set; }
         public string FACTOR_CATAGORY { get; set; }
-
     }
 }
