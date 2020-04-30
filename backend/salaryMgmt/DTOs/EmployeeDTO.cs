@@ -1,7 +1,6 @@
 ﻿using System;
 namespace salaryMgmt.DTOs
 {
-    [Serializable]
     public class EmployeeDTO
     {
         public int EMP_ID { get; set; }
@@ -14,10 +13,13 @@ namespace salaryMgmt.DTOs
         public string EMP_CELL { get; set; }
         public string EMP_EMAIL { get; set; }
         public DateTime EMP_START_DATE { get; set; }
-        public DateTime? EMP_END_DATE { get; set; }
+        public DateTime EMP_END_DATE { get; set; }
         public string EMP_PROFILE_PIC { get; set; }
         public int POS_ID { get; set; }
         public int DEP_ID { get; set; }
-        public char PAY_TYPE { get; set; }
+        public decimal PAY { get; set; }
+        public EmployeeDTO()
+        {
+        }
     }
 }

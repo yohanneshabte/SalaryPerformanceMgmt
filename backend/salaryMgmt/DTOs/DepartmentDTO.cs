@@ -5,7 +5,7 @@ using System.Threading.Tasks;
 
 namespace salaryMgmt.Models
 {
-    public class Department
+    public class DepartmentDTO
     {
         public int DEP_ID { get; set; }
         public string DEP_NAME { get; set; }

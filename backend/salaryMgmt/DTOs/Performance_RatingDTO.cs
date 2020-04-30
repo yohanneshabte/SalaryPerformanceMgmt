@@ -5,7 +5,7 @@ using System.Threading.Tasks;
 
 namespace salaryMgmt.Models
 {
-    public class Performance_Rating
+    public class Performance_RatingDTO
     {
         public int RATING_ID { get; set; }
         public string RATING_NAME { get; set; }

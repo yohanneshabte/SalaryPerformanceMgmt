@@ -5,7 +5,7 @@ using System.Threading.Tasks;
 
 namespace salaryMgmt.Models
 {
-    public class Merit_Guidelines
+    public class Merit_GuidelinesDTO
     {
         public int MERIT_ID { get; set; }
         public float RAISE_MIN { get; set; }
