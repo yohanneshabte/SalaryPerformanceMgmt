@@ -19,13 +19,6 @@ namespace salaryMgmt.DTOs
         public string EMP_PROFILE_PIC { get; set; }
         public int POS_ID { get; set; }
         public int DEP_ID { get; set; }
-<<<<<<< HEAD
         //public char PAY_TYPE { get; set; }
-=======
-        public decimal PAY { get; set; }
-        public EmployeeDTO()
-        {
-        }
->>>>>>> b55474b9e617de81789d23649bdd9aa40e8a0bc2
     }
 }
