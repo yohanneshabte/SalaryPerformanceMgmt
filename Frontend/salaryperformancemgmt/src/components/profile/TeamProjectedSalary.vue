@@ -171,9 +171,9 @@
 </v-col>
 <v-dialog
     v-model="dialog"
-    width="850"
+    width="1000"
 >
-<v-card elevation="5" class="pa-0 pb-0" max-height= "600">
+<v-card elevation="5" class="pa-0 pb-0" max-height= "700">
     <v-card-title class="headline pr-data" center>Budget/Raise Guidelines</v-card-title>
     <v-divider></v-divider>
     <GChart
@@ -213,8 +213,9 @@ export default {
                 colors:['#e53935','#1665c0'],
                 titleTextStyle: {fontSize: 18, bold: true},
                 legend: {alignment: 'center', textStyle: {fontSize: 15, marginBottom: 10}},
+                chartArea: {'width': '70%', 'height': '80%'},
                 height: 550,
-                width: 850,
+                width: 1000,
                 max: 3000,
                 annotations: {
                     alwaysOutside: true,

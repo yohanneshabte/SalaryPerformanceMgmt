@@ -68,7 +68,7 @@
       </v-col>
       <v-col cols="8">
         <v-stepper non-linear style="margin-bottom: 2000px;" v-model="e1">
-          <v-stepper-header class="grey lighten-2">
+          <v-stepper-header>
             <v-stepper-step editable :complete="e1 > 1" step="1">Enter Employee Info</v-stepper-step>
 
             <v-divider></v-divider>
@@ -82,8 +82,8 @@
 
           <v-stepper-items>
             <v-stepper-content step="1">
-              <v-card color="grey lighten-2">
-                <v-toolbar flat class="grey lighten-2">
+              <v-card class="grey lighten-2">
+                <v-toolbar flat class="blue lighten-2">
                   <v-icon>mdi-account</v-icon>
                   <v-toolbar-title class="font-weight-light">User Profile</v-toolbar-title>
                   <v-spacer></v-spacer>

@@ -9,17 +9,27 @@ export default new Vuex.Store({
         allEmployees: [],
         currentEmployee: null,
         currentEmployeeID: null,
-        accessType: 'staff',
+        accessType: null,
+        salary: null,
+        pr: null,
     },
     getters: {
         currentEmployeeID: (state) => state.currentEmployeeID,
         currentEmployee: (state) => state.currentEmployee,
         allEmployees: (state) => state.allEmployees,
         accessType: (state) => state.accessType,
+        salary: (state) => state.salary,
+        pr: (state) => state.pr,
     },
     mutations: {
         SET_USER(state, payload) {
             state.currentEmployee = payload;
+        },
+        SET_SALARY(state, payload) {
+            state.salary = payload;
+        },
+        SET_PR(state, payload) {
+            state.pr = payload;
         },
         SET_EMPLOYEES(state, payload) {
             state.allEmployees = payload;
@@ -29,7 +39,7 @@ export default new Vuex.Store({
         },
         SET_ACCESS_TYPE(state, payload) {
             state.accessType = payload;
-        }
+        },
     },
     actions: {
         changeEmployee({commit, dispatch}, payload) {
@@ -37,12 +47,14 @@ export default new Vuex.Store({
             if(this.state.currentEmployeeID != null) {
                 dispatch('fetchEmployee');
                 dispatch('fetchAllEmployees');
-                if(this.state.currentEmployee['poS_ID'] == 113)
-                    dispatch('assignAccess', 'supervisor');
+                if(this.state.currentEmployee.poS_ID == 113)
+                    commit("SET_ACCESS_TYPE", "supervisor");
                 else if(this.state.currentEmployee.poS_ID == 116)
-                    dispatch('assignAccess', 'cio');
+                    commit("SET_ACCESS_TYPE", "cio");
                 else if(this.state.currentEmployee.poS_ID == 120)
-                    dispatch('assignAccess', 'director');
+                    commit("SET_ACCESS_TYPE", "director");
+                else
+                    commit("SET_ACCESS_TYPE", "staff");
             }
         },
         fetchEmployee({commit}) {
@@ -51,6 +63,20 @@ export default new Vuex.Store({
                 url: "https://localhost:5001/api/employee/"+this.state.currentEmployeeID,
             })
             .then(response => (commit("SET_USER", response.data)))
+            .catch(error => console.log(error));
+
+            axios({
+                method: "get",
+                url: "https://localhost:5001/api/employee/"+this.state.currentEmployeeID+"/salary",
+            })
+            .then(response => (commit("SET_SALARY", response.data)))
+            .catch(error => console.log(error));
+
+            axios({
+                method: "get",
+                url: "https://localhost:5001/api/employee/"+this.state.currentEmployeeID+"/performance/review",
+            })
+            .then(response => (commit("SET_PR", response.data)))
             .catch(error => console.log(error));
         },
         fetchAllEmployees({commit}) {

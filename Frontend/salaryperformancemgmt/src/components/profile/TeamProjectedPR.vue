@@ -36,32 +36,7 @@
                 class="pt-1"
                 color="white"
                 >
-                <v-tabs
-                v-model="tab"
-                fixed-tabs
-                dark
-                background-color="grey darken-4"
-                show-arrows
-                center-active
-                >
-                <v-tabs-slider color="grey darken-4"></v-tabs-slider>
-
-                <v-tab
-                    v-for="i in 5"
-                    :key="i"
-                    class="pl-12 pr-12"
-                >
-                    Period 06/202{{ i }}
-                </v-tab>
-                </v-tabs>
-                <v-tabs-items v-model="tab">
-                <v-tab-item
-                    v-for="i in 5"
-                    :key="i"
-                >
-                    
-                </v-tab-item>
-                </v-tabs-items>
+                <v-btn class="black" block tile height="48">Period 06/2019</v-btn>
                 <v-row no-gutters>
                         <v-col cols="6" style="border-right: 2px solid lightgrey">
                             <v-btn color="red darken-1" elevation="0" height="40" tile class="ma-0 width-100">
@@ -278,7 +253,7 @@
 </v-row>
 <v-dialog
     v-model="dialog"
-    width="550"
+    width="650"
 >
 <v-card elevation="5" class="pa-0 pb-0" max-height= "600">
     <v-card-title class="headline pr-data" center>Performance Guidelines</v-card-title>
@@ -303,7 +278,7 @@
 </v-dialog>
 <v-dialog
     v-model="dialog1"
-    width="550"
+    width="650"
 >
 <v-card elevation="5" class="pa-0 pb-0" max-height= "600">
     <v-card-title class="headline pr-data" center>Performance Guidelines</v-card-title>
@@ -328,7 +303,7 @@
 </v-dialog>
 <v-dialog
     v-model="dialog2"
-    width="550"
+    width="650"
 >
 <v-card elevation="5" class="pa-0 pb-0" max-height= "600">
     <v-card-title class="headline pr-data" center>Performance Guidelines</v-card-title>
@@ -384,7 +359,6 @@ export default {
                 height: 450,
                 width: 650,
                 pieHole: 0.65,
-                is3D: true,
             },
             chartData1: [['Rating', 'Percentage'],
                         ['OP,EC', 25],
@@ -401,7 +375,6 @@ export default {
                 height: 450,
                 width: 650,
                 pieHole: 0.65,
-                is3D: true,
             },
             chartData2: [['Rating', 'Percentage'],
                         ['OP,EC', 20],

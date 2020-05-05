@@ -37,7 +37,7 @@ import {mapGetters} from 'vuex';
 
   export default {
     name: 'header',
-    props: ['currentEmployeeID','currentEmployee', 'allEmployees'],
+    
     data () {
       return {
         auth: this.$route.path=='/auth'?false:true,

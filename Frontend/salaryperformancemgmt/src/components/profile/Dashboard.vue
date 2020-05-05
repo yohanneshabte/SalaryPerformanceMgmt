@@ -191,7 +191,7 @@ export default {
         }
     },
     mounted () {
-        this.$store.dispatch("changeEmployee",parseInt(prompt("Enter Employee ID: ")));
+        
     }
 
 }

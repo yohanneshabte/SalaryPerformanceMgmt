@@ -35,7 +35,7 @@
                     style="margin-top:70px"
                   >
                   <v-alert type="error" border="left" dense v-show="error" class="mb-8" dismissible>
-                    Employee ID and Email doesn't match!
+                    {{errorMsg}}
                   </v-alert>
                   <v-text-field 
                     v-model="email"
@@ -70,6 +70,7 @@
 </template>
 
 <script>
+  import {mapGetters} from 'vuex';
   export default {
     props: {
       source: String,
@@ -78,6 +79,7 @@
       email: '',
       empID: '',
       error: false,
+      errorMsg: '',
       valid: false,
       idRules: [
         v => !!v || 'ID is required',
@@ -91,16 +93,29 @@
     methods: {
         validate () {
           this.$refs.form.validate();
-          if(!this.error) {
-            this.$session.start();
-            this.$session.set('email', this.email);
-            this.$session.set('empID', this.empID);   
-            this.$router.push('/');
-          } else {
+          this.$store.dispatch("changeEmployee",parseInt(this.empID));
+          if(this.currentEmployee.firstName == null) {
+            this.errorMsg = "Employee ID doesn't exist!";
             this.error = true;
+          } else {
+            if(this.currentEmployee.email != this.email) {
+              this.errorMsg = "Employee ID and Email doesn't match!";
+              this.$store.dispatch("changeEmployee", null);
+              this.error = true;
+            } else {
+              // correct sign in
+              this.$session.start();
+              this.$session.set('email', this.email);
+              this.$session.set('empID', this.empID);   
+              this.$router.push('/');
+            }
           }
       }
     },
+    computed: {
+      ...mapGetters(['currentEmployeeID','currentEmployee', 'allEmployees']),
+      
+    }
   }
 </script>
 

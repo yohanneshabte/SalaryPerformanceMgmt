@@ -14,45 +14,35 @@
       </thead>
       <tbody>
         <tr v-for="item in employees" :key="item.name">
-          <td>{{ item.photo }}</td>
-          <td>{{ item.fullName }}</td>
-          <td>{{ item.title }}</td>
-          <td>{{ item.CurrentPR }}</td>
-          <td>{{ item.CurrentSalary }}</td>
-          <td>{{ item.ProjectedPR }}</td>
-          <td>{{ item.SalaryRaised }}</td>
+          <td><v-list-item-avatar color="grey"><img :src="require('./../../assets/' + item.employee.profilePic)"/></v-list-item-avatar></td>
+          <td>{{item.employee.firstName + " "+ item.employee.middleName + ". "+ item.employee.lastName}}</td>
+          <td></td>
+          <td>item.CurrentPR</td>
+          <td></td>
+          <td></td>
+          <td></td>
         </tr>
       </tbody>
     </template>
   </v-simple-table>
 </template>
 <script>
+import {mapGetters} from 'vuex';
+
 export default {
     name: 'Team',
      data () {
       return {
-        employees: [
-          {
-            photo: '',
-            fullName: 'Frankie I. Harris',
-            title: 'Senior Systems Architect',
-            CurrentPR: 'OP',
-            CurrentSalary: '$95,000',
-            ProjectedPR: 'OP',
-            SalaryRaised: '$5,000',
-          },
-          {
-            photo: '',
-            fullName: 'Mary B. Sylva',
-            title: 'Supervisor',
-            CurrentPR: 'OP',
-            CurrentSalary: '$125,000',
-            ProjectedPR: 'NA',
-            SalaryRaised: '$8,000',
-          },
-        ],
+        employees: null
       }
     },
+    computed: {
+      ...mapGetters(['currentEmployeeID','currentEmployee', 'allEmployees', 'salary', 'pr']),
+      
+    },
+    mounted() {
+      this.employees = this.allEmployees
+    }
 }
 </script>
 

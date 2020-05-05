@@ -55,9 +55,9 @@
     <v-toolbar dense color="grey darken-3" class="ml-12">
       <v-btn class="ma-2 pl-0 pr-0" color="blue" width="250" right>
        <v-avatar size="30" left>
-      <img src="./../../assets/image-4.png" /> 
+      <img :src="require('./../../assets/' + currentEmployee.profilePic)" /> 
       </v-avatar>
-      Peter H. Atkins
+      {{currentEmployee.firstName + " "+ currentEmployee.middleName + ". "+ currentEmployee.lastName}}
       <v-icon right>mdi-dots-vertical</v-icon>
       </v-btn>
       <v-btn rounded class="ma-2 pl-0 pr-0" outlined color="blue" width="250" right>
@@ -78,15 +78,15 @@
         class="mx-auto employee-card"
       >
         <v-list-item>
-          <v-list-item-avatar color="grey"><img src="./../../assets/image-4.png"/></v-list-item-avatar>
+          <v-list-item-avatar color="grey"><img :src="require('./../../assets/' + currentEmployee.profilePic)"/></v-list-item-avatar>
           <v-list-item-content>
             <v-list-item-title class="overline">EMPLOYEE INFORMATION</v-list-item-title>
           </v-list-item-content>
         </v-list-item>
         <v-avatar color="blue darken-2" tile height="220" style="min-width: 100%">
         <v-img
-          src="./../../assets/image-4.png"
-          height="180"
+          :src="require('./../../assets/' + currentEmployee.profilePic)"
+          height="125"
           contain
         ></v-img>
         </v-avatar>
@@ -97,7 +97,7 @@
               </v-list-item-icon>
 
               <v-list-item-content>
-                <v-list-item-title>111122</v-list-item-title>
+                <v-list-item-title>{{currentEmployee.emP_ID}}</v-list-item-title>
                 <v-list-item-subtitle>Employee ID</v-list-item-subtitle>
               </v-list-item-content>
           </v-list-item>
@@ -107,7 +107,7 @@
               </v-list-item-icon>
 
               <v-list-item-content>
-                <v-list-item-title>Director Business Technology</v-list-item-title>
+                <v-list-item-title>{{salary.position.posTitle}}</v-list-item-title>
                 <v-list-item-subtitle>Title</v-list-item-subtitle>
               </v-list-item-content>
           </v-list-item>
@@ -117,7 +117,7 @@
               </v-list-item-icon>
 
               <v-list-item-content>
-                <v-list-item-title>Peter H. Atkins</v-list-item-title>
+                <v-list-item-title>{{currentEmployee.firstName + " "+ currentEmployee.middleName + ". "+ currentEmployee.lastName}}</v-list-item-title>
                 <v-list-item-subtitle>Full Name</v-list-item-subtitle>
               </v-list-item-content>
           </v-list-item>
@@ -127,7 +127,7 @@
               </v-list-item-icon>
 
               <v-list-item-content>
-                <v-list-item-title>peteratkins@federated.com</v-list-item-title>
+                <v-list-item-title>{{currentEmployee.email}}</v-list-item-title>
                 <v-list-item-subtitle>Email</v-list-item-subtitle>
               </v-list-item-content>
           </v-list-item>
@@ -137,7 +137,7 @@
               </v-list-item-icon>
 
               <v-list-item-content>
-                <v-list-item-title>EC</v-list-item-title>
+                <v-list-item-title>{{pr.currentPR.ratingName}}</v-list-item-title>
                 <v-list-item-subtitle>Current PR</v-list-item-subtitle>
               </v-list-item-content>
           </v-list-item>
@@ -147,7 +147,7 @@
               </v-list-item-icon>
 
               <v-list-item-content>
-                <v-list-item-title>$200,000</v-list-item-title>
+                <v-list-item-title>{{salary.salary.salary}}</v-list-item-title>
                 <v-list-item-subtitle>Current Salary</v-list-item-subtitle>
               </v-list-item-content>
           </v-list-item>
@@ -197,6 +197,8 @@ import TeamProjectedSalary from './TeamProjectedSalary';
 import Team from './Team';
 import Salary from './Salary';
 import PerformanceReview from './PerformanceReview';
+import {mapGetters} from 'vuex';
+
 export default {
   name: 'EmployeeCard',
   props: ['id'],
@@ -216,6 +218,8 @@ export default {
           { tab: 'TEAM PROJECTED SALARY', component: TeamProjectedSalary },
           { tab: 'TEAM', component: Team },
        ],
+      other: {firstName: 'win'},
+      employee: null,
       employeeHeirarchy: [
         {
           text: 'Peter H. Atkins',
@@ -234,7 +238,14 @@ export default {
         },
   ],
     }
-  }
+  },
+    computed: {
+      ...mapGetters(['currentEmployeeID','currentEmployee', 'allEmployees', 'salary', 'pr']),
+      
+    },
+    mounted () {
+      this.employee = this.id==null?this.currentEmployee:this.other;
+    }
 }
 </script>
 
