@@ -40,7 +40,7 @@ namespace salaryMgmt.Models
                 if (!sal.IsDBNull(sal.GetOrdinal("emp_raise_id")))
                     payRaise.EMP_RAISE_ID = (int)sal.GetSqlInt32(sal.GetOrdinal("emp_raise_id"));
                 if (!sal.IsDBNull(sal.GetOrdinal("raise_amount")))
-                    payRaise.raiseAmount = (float)sal.GetFloat(sal.GetOrdinal("raise_amount"));
+                    payRaise.raiseAmount = (float)sal.GetDouble(sal.GetOrdinal("raise_amount"));
                 if (!sal.IsDBNull(sal.GetOrdinal("emp_start_date")))
                     payRaise.raiseDate = sal.GetDateTime(sal.GetOrdinal("emp_start_date"));
             }
