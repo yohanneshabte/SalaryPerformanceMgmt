@@ -9,9 +9,9 @@ namespace salaryMgmt.Models
     public class MeritGuidelinesDTO
     {
         public int MERIT_ID { get; set; }
-        public float RAISE_MIN { get; set; }
-        public float RAISE_MAX { get; set;}
-        public float RAISE_TARGET { get; set; }
+        public float raiseMin { get; set; }
+        public float raiseMax { get; set;}
+        public float raiseTarget { get; set; }
 
     }
 }

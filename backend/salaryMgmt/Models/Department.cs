@@ -23,7 +23,7 @@ namespace salaryMgmt.Models
             while (dep.Read())
             {
                 DepDTO.DEP_ID = dep.GetInt32(dep.GetOrdinal("dep_id"));
-                DepDTO.DEP_NAME = dep.GetString(dep.GetOrdinal("dep_name"));
+                DepDTO.depName = dep.GetString(dep.GetOrdinal("dep_name"));
 
             }
         }

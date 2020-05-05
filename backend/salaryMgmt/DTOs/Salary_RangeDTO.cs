@@ -9,9 +9,9 @@ namespace salaryMgmt.Models
     public class SalaryRangeDTO
     {
         public int POS_ID { get; set; }
-        public float POS_SALARY { get; set; }
-        public float SALARY_MAX { get; set; }
-        public float SALARY_MIN { get; set; }
+        public float posSalary { get; set; }
+        public float salaryMax { get; set; }
+        public float salaryMin { get; set; }
 
     }
 }

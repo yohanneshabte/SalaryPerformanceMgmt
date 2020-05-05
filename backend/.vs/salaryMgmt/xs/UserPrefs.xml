@@ -1,22 +1,33 @@
 ﻿<Properties StartupConfiguration="{5155E20A-B3CB-4E39-802F-E510C5A141D3}|Default">
-  <MonoDevelop.Ide.Workbench ActiveDocument="salaryMgmt/DTOs/DepartmentDTO.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="salaryMgmt/Controllers/EmployeeController.cs">
     <Files>
       <File FileName="salaryMgmt/Config/Gateway/DatabaseGateway.cs" Line="46" Column="1" />
       <File FileName="salaryMgmt/Startup.cs" />
-      <File FileName="salaryMgmt/Program.cs" Line="21" Column="38" />
+      <File FileName="salaryMgmt/Program.cs" />
       <File FileName="salaryMgmt/appsettings.json" />
       <File FileName="salaryMgmt/Properties/launchSettings.json" />
-      <File FileName="salaryMgmt/Controllers/EmployeeController.cs" Line="36" Column="1" />
-      <File FileName="salaryMgmt/Models/Employee.cs" Line="16" Column="21" />
-      <File FileName="salaryMgmt/DTOs/EmployeeDTO.cs" Line="16" Column="51" />
-      <File FileName="salaryMgmt/Models/Employees.cs" Line="35" Column="20" />
-      <File FileName="salaryMgmt/DTOs/PositionDTO.cs" Line="1" Column="1" />
-      <File FileName="salaryMgmt/DTOs/Merit_GuidelinesDTO.cs" Line="13" Column="36" />
+      <File FileName="salaryMgmt/Controllers/EmployeeController.cs" Line="38" Column="30" />
+      <File FileName="salaryMgmt/Models/Employee.cs" Line="15" Column="23" />
+      <File FileName="salaryMgmt/DTOs/EmployeeDTO.cs" />
+      <File FileName="salaryMgmt/Models/Employees.cs" Line="1" Column="1" />
+      <File FileName="salaryMgmt/DTOs/PositionDTO.cs" />
+      <File FileName="salaryMgmt/DTOs/Merit_GuidelinesDTO.cs" />
       <File FileName="salaryMgmt/DTOs/Employee_Performance_ReviewDTO.cs" Line="16" Column="22" />
       <File FileName="salaryMgmt/DTOs/Pay_RaiseDTO.cs" Line="11" Column="31" />
-      <File FileName="salaryMgmt/DTOs/SalaryDTO.cs" Line="1" Column="1" />
-      <File FileName="salaryMgmt/DTOs/WageDTO.cs" Line="1" Column="1" />
+      <File FileName="salaryMgmt/DTOs/SalaryDTO.cs" />
+      <File FileName="salaryMgmt/DTOs/WageDTO.cs" />
       <File FileName="salaryMgmt/DTOs/DepartmentDTO.cs" Line="1" Column="1" />
+      <File FileName="salaryMgmt/DTOs/Employee_Performance_ProjectionDTO.cs" Line="1" Column="1" />
+      <File FileName="salaryMgmt/Models/Pay_Raise.cs" Line="19" Column="33" />
+      <File FileName="salaryMgmt/Models/Performance_Factors.cs" Line="21" Column="22" />
+      <File FileName="salaryMgmt/Models/Department.cs" Line="1" Column="1" />
+      <File FileName="salaryMgmt/Models/Salary_Range.cs" Line="34" Column="10" />
+      <File FileName="salaryMgmt/Models/Salary.cs" Line="1" Column="1" />
+      <File FileName="salaryMgmt/Models/Position.cs" Line="26" Column="19" />
+      <File FileName="salaryMgmt/Models/PerformanceReviews.cs" Line="1" Column="1" />
+      <File FileName="salaryMgmt/Models/PerformanceReview.cs" Line="1" Column="1" />
+      <File FileName="salaryMgmt/Models/Performance_Rating.cs" Line="19" Column="42" />
+      <File FileName="salaryMgmt/Models/Merit_Guidelines.cs" Line="19" Column="35" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
@@ -26,14 +37,19 @@
               <Node name="Config" expanded="True">
                 <Node name="Gateway" expanded="True" />
               </Node>
-              <Node name="Controllers" expanded="True" />
-              <Node name="DTOs" expanded="True" />
-              <Node name="Models" expanded="True">
-                <Node name="Employees.cs" selected="True" />
+              <Node name="Controllers" expanded="True">
+                <Node name="EmployeeController.cs" selected="True" />
               </Node>
+              <Node name="DTOs" expanded="True" />
+              <Node name="Models" expanded="True" />
               <Node name="Properties" expanded="True" />
             </Node>
           </Node>
+        </State>
+      </Pad>
+      <Pad Id="MonoDevelop.Debugger.WatchPad">
+        <State>
+          <Value>PRDetail</Value>
         </State>
       </Pad>
     </Pads>

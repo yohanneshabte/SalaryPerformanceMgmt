@@ -11,19 +11,19 @@ namespace salaryMgmt.Models
 {
     public class Performance_Rating
     {
-        public Performance_RatingDTO P_ratingDTO { get; set; }
+        public PerformanceRatingDTO P_ratingDTO { get; set; }
         private DatabaseGateway db;
 
         public Performance_Rating(int id)
         {
-            P_ratingDTO = new Performance_RatingDTO();
+            P_ratingDTO = new PerformanceRatingDTO();
             db = new DatabaseGateway();
             SqlDataReader p_rating = GetPerformance_Rating(id);
             while (p_rating.Read())
             {
                 P_ratingDTO.RATING_ID = p_rating.GetInt32(p_rating.GetOrdinal("rating_id"));
-                P_ratingDTO.RATING_NAME = p_rating.GetString(p_rating.GetOrdinal("rating_name"));
-                P_ratingDTO.RATING_DESC = p_rating.GetString(p_rating.GetOrdinal("rating_desc"));
+                P_ratingDTO.ratingName = p_rating.GetString(p_rating.GetOrdinal("rating_name"));
+                P_ratingDTO.ratingDesc = p_rating.GetString(p_rating.GetOrdinal("rating_desc"));
 
             }
         }

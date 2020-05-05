@@ -9,7 +9,7 @@ namespace salaryMgmt.Models
     public class PerformanceRatingDTO
     {
         public int RATING_ID { get; set; }
-        public string RATING_NAME { get; set; }
-        public string RATING_DESC { get; set; }
+        public string ratingName { get; set; }
+        public string ratingDesc { get; set; }
     }
 }

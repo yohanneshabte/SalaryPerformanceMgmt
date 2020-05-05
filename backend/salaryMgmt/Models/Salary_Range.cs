@@ -11,20 +11,20 @@ namespace salaryMgmt.Models
 {
     public class Salary_Range
     {
-        public Salary_RangeDTO S_rangeDTO { get; set; }
+        public SalaryRangeDTO S_rangeDTO { get; set; }
         private DatabaseGateway db;
 
         public Salary_Range(int id)
         {
-            S_rangeDTO = new Salary_RangeDTO();
+            S_rangeDTO = new SalaryRangeDTO();
             db = new DatabaseGateway();
             SqlDataReader s_range = GetSalary_Range(id);
             while (s_range.Read())
             {
                 S_rangeDTO.POS_ID = s_range.GetInt32(s_range.GetOrdinal("pos_id"));
-                S_rangeDTO.POS_SALARY = s_range.GetFloat(s_range.GetOrdinal("pos_salary"));
-                S_rangeDTO.SALARY_MAX = s_range.GetFloat(s_range.GetOrdinal("salary_max"));
-                S_rangeDTO.SALARY_MIN = s_range.GetFloat(s_range.GetOrdinal("salary_min"));
+                S_rangeDTO.posSalary = s_range.GetFloat(s_range.GetOrdinal("pos_salary"));
+                S_rangeDTO.salaryMax = s_range.GetFloat(s_range.GetOrdinal("salary_max"));
+                S_rangeDTO.salaryMin = s_range.GetFloat(s_range.GetOrdinal("salary_min"));
 
             }
         }

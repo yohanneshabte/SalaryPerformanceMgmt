@@ -31,18 +31,18 @@ namespace salaryMgmt.Models
             while(pr.Read())
             {
                 Position.POS_ID = (int)pr.GetSqlInt32(pr.GetOrdinal("pos_id"));
-                Position.POS_TITLE = pr.GetString(pr.GetOrdinal("pos_titile"));
+                Position.posTitle = pr.GetString(pr.GetOrdinal("pos_titile"));
                 EmpPR.EMP_PER_REV = (int)pr.GetSqlInt32(pr.GetOrdinal("emp_per_rev"));
-                EmpPR.PERFORMANCE_FEEDBACK = pr.GetString(pr.GetOrdinal("performance_feedback"));
-                EmpPR.PREVIOUS_REVIEW = pr.GetString(pr.GetOrdinal("previos_review"));
-                EmpPR.REVIEW_DATE = pr.GetDateTime(pr.GetOrdinal("review_date"));
+                EmpPR.performanceFeedback = pr.GetString(pr.GetOrdinal("performance_feedback"));
+                EmpPR.previousReview = pr.GetString(pr.GetOrdinal("previos_review"));
+                EmpPR.reviewDate = pr.GetDateTime(pr.GetOrdinal("review_date"));
                 CurrentPR.RATING_ID = (int)pr.GetSqlInt32(pr.GetOrdinal("rating_id"));
-                CurrentPR.RATING_NAME = pr.GetString(pr.GetOrdinal("rating_name"));
-                CurrentPR.RATING_DESC = pr.GetString(pr.GetOrdinal("rating_desc"));
+                CurrentPR.ratingName = pr.GetString(pr.GetOrdinal("rating_name"));
+                CurrentPR.ratingDesc = pr.GetString(pr.GetOrdinal("rating_desc"));
                 MeritGuidelines.MERIT_ID = (int)pr.GetSqlInt32(pr.GetOrdinal("merit_id"));
-                MeritGuidelines.RAISE_TARGET = (float)pr.GetDouble(pr.GetOrdinal("raise_target"));
-                MeritGuidelines.RAISE_MIN = (float)pr.GetDouble(pr.GetOrdinal("raise_min"));
-                MeritGuidelines.RAISE_MAX = (float)pr.GetDouble(pr.GetOrdinal("raise_max"));
+                MeritGuidelines.raiseTarget = (float)pr.GetDouble(pr.GetOrdinal("raise_target"));
+                MeritGuidelines.raiseMin = (float)pr.GetDouble(pr.GetOrdinal("raise_min"));
+                MeritGuidelines.raiseMax = (float)pr.GetDouble(pr.GetOrdinal("raise_max"));
 
                 PerformanceReviewDetail PRDetailCurrent = new PerformanceReviewDetail(EmpPR.EMP_PER_REV);
 
@@ -72,10 +72,10 @@ namespace salaryMgmt.Models
 
                 PRDetail.PR_DETAIL_ID = (int)prd.GetSqlInt32(prd.GetOrdinal("pr_detail_id"));
                 PRDetail.EMP_PER_REV = (int)prd.GetSqlInt32(prd.GetOrdinal("emp_per_rev"));
-                PRDetail.FACTOR_NAME = prd.GetString(prd.GetOrdinal("factor_name"));
-                PRDetail.FACTOR_DIMENSIONS = prd.GetString(prd.GetOrdinal("factor_dimensions"));
-                PRDetail.FACTOR_CATEGORY = prd.GetString(prd.GetOrdinal("factor_catagory"));
-                PRDetail.RATING_NAME = prd.GetString(prd.GetOrdinal("factor_name"));
+                PRDetail.factorName = prd.GetString(prd.GetOrdinal("factor_name"));
+                PRDetail.factorDimensionS = prd.GetString(prd.GetOrdinal("factor_dimensions"));
+                PRDetail.factorCategory = prd.GetString(prd.GetOrdinal("factor_catagory"));
+                PRDetail.ratingName = prd.GetString(prd.GetOrdinal("factor_name"));
 
                 PRDetailList.Add(PRDetail);
             }

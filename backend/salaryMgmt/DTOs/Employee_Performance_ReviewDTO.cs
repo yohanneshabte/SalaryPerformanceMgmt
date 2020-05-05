@@ -10,9 +10,9 @@ namespace salaryMgmt.Models
     {
         public int EMP_PER_REV { get; set; }
         public int EMP_ID { get; set; }
-        public DateTime REVIEW_DATE { get; set; }
-        public string PREVIOUS_REVIEW { get; set; }
-        public string PERFORMANCE_FEEDBACK { get; set; }
+        public DateTime reviewDate { get; set; }
+        public string previousReview { get; set; }
+        public string performanceFeedback { get; set; }
         public int RATING_ID { get; set; }
         public List<PerformanceReviewDetail> PRDetails { get; set; } 
 

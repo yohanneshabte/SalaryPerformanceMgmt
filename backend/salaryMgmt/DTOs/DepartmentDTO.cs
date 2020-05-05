@@ -9,7 +9,7 @@ namespace salaryMgmt.Models
     public class DepartmentDTO
     {
         public int DEP_ID { get; set; }
-        public string DEP_NAME { get; set; }
+        public string depName { get; set; }
 
     }
 }

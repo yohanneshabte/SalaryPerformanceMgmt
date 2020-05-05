@@ -11,20 +11,20 @@ namespace salaryMgmt.Models
 {
     public class Merit_Guidelines
     {
-        public Merit_GuidelinesDTO M_guideDTO { get; set; }
+        public MeritGuidelinesDTO M_guideDTO { get; set; }
         private DatabaseGateway db;
 
         public Merit_Guidelines(int id)
         {
-            M_guideDTO = new Merit_GuidelinesDTO();
+            M_guideDTO = new MeritGuidelinesDTO();
             db = new DatabaseGateway();
             SqlDataReader m_guide = GetMerit_Guidelines(id);
             while (m_guide.Read())
             {
                 M_guideDTO.MERIT_ID = m_guide.GetInt32(m_guide.GetOrdinal("merit_id"));
-                M_guideDTO.RAISE_MIN = m_guide.GetFloat(m_guide.GetOrdinal("raise_min"));
-                M_guideDTO.RAISE_MAX = m_guide.GetFloat(m_guide.GetOrdinal("raise_max"));
-                M_guideDTO.RAISE_TARGET = m_guide.GetFloat(m_guide.GetOrdinal("raise_target"));
+                M_guideDTO.raiseMin = m_guide.GetFloat(m_guide.GetOrdinal("raise_min"));
+                M_guideDTO.raiseMax = m_guide.GetFloat(m_guide.GetOrdinal("raise_max"));
+                M_guideDTO.raiseTarget = m_guide.GetFloat(m_guide.GetOrdinal("raise_target"));
 
             }
         }

@@ -22,8 +22,8 @@ namespace salaryMgmt.Models
             while (pos.Read())
             {
                 PosDTO.POS_ID = pos.GetInt32(pos.GetOrdinal("pos_id"));
-                PosDTO.POS_TITLE = pos.GetString(pos.GetOrdinal("pos_title"));
-                PosDTO.POS_PAY_TYPE = pos.GetChar(pos.GetOrdinal("pos_pay_type"));
+                PosDTO.posTitle = pos.GetString(pos.GetOrdinal("pos_title"));
+                //PosDTO.POS_PAY_TYPE = pos.GetChar(pos.GetOrdinal("pos_pay_type"));
 
             }
         }

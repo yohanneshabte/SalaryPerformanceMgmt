@@ -6171,11 +6171,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/Users/user2/Downloads/SalaryPerformanceMgmt-backend-v0.2-dev 2/backend/salaryMgmt/salaryMgmt.csproj",
+      "projectUniqueName": "/Users/user2/Documents/2020/IT380/SalaryPerformanceMgmt/backend/salaryMgmt/salaryMgmt.csproj",
       "projectName": "salaryMgmt",
-      "projectPath": "/Users/user2/Downloads/SalaryPerformanceMgmt-backend-v0.2-dev 2/backend/salaryMgmt/salaryMgmt.csproj",
+      "projectPath": "/Users/user2/Documents/2020/IT380/SalaryPerformanceMgmt/backend/salaryMgmt/salaryMgmt.csproj",
       "packagesPath": "/Users/user2/.nuget/packages/",
-      "outputPath": "/Users/user2/Downloads/SalaryPerformanceMgmt-backend-v0.2-dev 2/backend/salaryMgmt/obj/",
+      "outputPath": "/Users/user2/Documents/2020/IT380/SalaryPerformanceMgmt/backend/salaryMgmt/obj/",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "/Users/user2/.config/NuGet/NuGet.Config"

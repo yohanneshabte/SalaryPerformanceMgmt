@@ -10,9 +10,9 @@ namespace salaryMgmt.Models
     {
         public int PR_DETAIL_ID { get; set; }
         public int EMP_PER_REV { get; set; }
-        public string RATING_NAME { get; set; }
-        public string FACTOR_NAME { get; set; }
-        public string FACTOR_DIMENSIONS { get; set; }
-        public string FACTOR_CATEGORY { get; set; }
+        public string ratingName { get; set; }
+        public string factorName { get; set; }
+        public string factorDimensionS { get; set; }
+        public string factorCategory { get; set; }
     }
 }

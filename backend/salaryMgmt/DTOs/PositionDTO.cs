@@ -9,7 +9,7 @@ namespace salaryMgmt.Models
     public class PositionDTO
     {
         public int POS_ID { get; set; }
-        public string POS_TITLE { get; set; }
+        public string posTitle { get; set; }
         //public char POS_PAY_TYPE { get; set; }
     }
 }

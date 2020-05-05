@@ -11,7 +11,7 @@ namespace salaryMgmt.Models
         public int EMP_RAISE_ID { get; set; }
         public int EMP_ID { get; set; }
         public int EMP_PER_REV { get; set; }
-        public float RAISE_AMOUNT { get; set; }
-        public DateTime RAISE_DATE { get; set; }
+        public float raiseAmount { get; set; }
+        public DateTime raiseDate { get; set; }
     }
 }

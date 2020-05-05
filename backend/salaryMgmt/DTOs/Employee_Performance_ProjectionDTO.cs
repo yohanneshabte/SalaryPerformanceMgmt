@@ -9,7 +9,7 @@ namespace salaryMgmt.Models
     public class EmployeePerformanceProjectionDTO
     {
         public int EMP_ID { get; set; }
-        public DateTime PROJ_DATE { get; set; }
+        public DateTime projDate { get; set; }
         public int RATING_ID { get; set; }
     }
 }

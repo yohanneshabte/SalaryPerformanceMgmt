@@ -9,6 +9,6 @@ namespace salaryMgmt.Models
     public class SalaryDTO
     {
         public int EMP_ID { get; set; }
-        public float SALARY { get; set; }
+        public float salary { get; set; }
     }
 }
