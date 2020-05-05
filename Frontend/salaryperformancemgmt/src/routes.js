@@ -19,6 +19,7 @@ const routes = [
     { path: '/forms', component: PerformanceReview },
     { path: '/performance', component: PerformanceReview },
     { path: '/employee', component: EmployeeCard },
+    { path: '/employee/:id', component: EmployeeCard, props: true },
     { path: '/reports', component: MyReports },
     { path: '/auth', component: Auth },
 ];

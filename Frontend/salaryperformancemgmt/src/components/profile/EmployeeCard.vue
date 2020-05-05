@@ -199,6 +199,7 @@ import Salary from './Salary';
 import PerformanceReview from './PerformanceReview';
 export default {
   name: 'EmployeeCard',
+  props: ['id'],
   components: {
     TeamProjectedPR,
     TeamProjectedSalary,

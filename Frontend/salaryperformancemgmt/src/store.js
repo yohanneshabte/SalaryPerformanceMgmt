@@ -9,11 +9,13 @@ export default new Vuex.Store({
         allEmployees: [],
         currentEmployee: null,
         currentEmployeeID: null,
+        accessType: 'staff',
     },
     getters: {
         currentEmployeeID: (state) => state.currentEmployeeID,
         currentEmployee: (state) => state.currentEmployee,
         allEmployees: (state) => state.allEmployees,
+        accessType: (state) => state.accessType,
     },
     mutations: {
         SET_USER(state, payload) {
@@ -24,6 +26,9 @@ export default new Vuex.Store({
         },
         CHANGE_USER(state, payload) {
             state.currentEmployeeID = payload;
+        },
+        SET_ACCESS_TYPE(state, payload) {
+            state.accessType = payload;
         }
     },
     actions: {
@@ -32,6 +37,12 @@ export default new Vuex.Store({
             if(this.state.currentEmployeeID != null) {
                 dispatch('fetchEmployee');
                 dispatch('fetchAllEmployees');
+                if(this.state.currentEmployee['poS_ID'] == 113)
+                    dispatch('assignAccess', 'supervisor');
+                else if(this.state.currentEmployee.poS_ID == 116)
+                    dispatch('assignAccess', 'cio');
+                else if(this.state.currentEmployee.poS_ID == 120)
+                    dispatch('assignAccess', 'director');
             }
         },
         fetchEmployee({commit}) {
@@ -49,6 +60,9 @@ export default new Vuex.Store({
             })
             .then(response => (commit("SET_EMPLOYEES", response.data)))
             .catch(error => console.log(error));
+        },
+        assignAccess({commit}, payload) {
+            commit("SET_ACCESS_TYPE", payload);
         }
     }
 });
