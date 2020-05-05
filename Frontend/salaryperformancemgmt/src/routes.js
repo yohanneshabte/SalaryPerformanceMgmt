@@ -4,6 +4,7 @@ import EmployeeCard from './components/profile/EmployeeCard.vue';
 import Heirarchy from './components/profile/Heirarchy.vue';
 import Dashboard from './components/profile/Dashboard.vue';
 import PrOverall from './components/profile/PrOverall.vue';
+import MyReports from './components/profile/MyReports.vue';
 import PerformanceReview from './components/performance/performanceReview.vue';
 
 import Auth from './components/Auth/auth.vue';
@@ -18,6 +19,7 @@ const routes = [
     { path: '/forms', component: PerformanceReview },
     { path: '/performance', component: PerformanceReview },
     { path: '/employee', component: EmployeeCard },
+    { path: '/reports', component: MyReports },
     { path: '/auth', component: Auth },
 ];
 

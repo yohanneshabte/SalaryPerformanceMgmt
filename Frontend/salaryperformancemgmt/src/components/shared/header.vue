@@ -8,7 +8,7 @@
     <v-img src="./../../assets/federated-icon.png" height="50" max-width="220" contain/>
 
     <v-spacer></v-spacer>
-
+      <v-text class="headline">Name Here</v-text>
       <v-btn icon elevation="4" to="/employee">
         <v-img src="./../../assets/image-4.png" height="50" contain/>
       </v-btn>
@@ -32,10 +32,14 @@
 <script>
   export default {
     name: 'header',
+
     data () {
       return {
-
+        employee: null,
       }
     },
+    computed () {
+      this.employee = this.$store.getters['currentEmployee'];
+    }
   }
 </script>

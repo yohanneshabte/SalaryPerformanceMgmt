@@ -62,6 +62,7 @@
                     <v-card
                         :elevation="hover ? 12 : 2"
                         :class="{ 'on-hover': hover }"
+                        to="/forms"
                         color="red darken-2"
                         height="280"
                         shaped>
@@ -72,6 +73,7 @@
                         <v-row>
                             <v-col cols="12"><v-sheet height="140" color="red darken-2"></v-sheet></v-col>
                         </v-row>
+                        
                         <v-card-actions>
                             <v-list-item class="grow">
                                 <v-row
@@ -126,6 +128,7 @@
                     <v-card
                         :elevation="hover ? 12 : 2"
                         :class="{ 'on-hover': hover }"
+                        to="/reports"
                         color="deep-orange darken-2"
                         height="280"
                         shaped>
@@ -186,6 +189,9 @@ export default {
                 }]
             },
         }
+    },
+    mounted () {
+        this.$store.dispatch("changeEmployee",parseInt(prompt("Enter Employee ID: ")));
     }
 
 }
