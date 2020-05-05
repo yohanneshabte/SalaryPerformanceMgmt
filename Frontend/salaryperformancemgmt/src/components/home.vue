@@ -2,7 +2,7 @@
   <v-container class="py-0 pl-0" style="margin-left: 100px; margin-top: 20px">
    <v-row>
     <v-col cols="12" no-gutters>
-    <router-view />
+    <router-view/>
     </v-col>
    </v-row>
   </v-container>
@@ -17,10 +17,10 @@
 
   export default {
     name: 'Home',
-    data: () => ({
-
+    //props: ['currentEmployeeID','currentEmployee', 'allEmployees'],
+    data () {
       
-    }),
+    },
     components: {
      //EmployeeList,
      //Heirarchy,

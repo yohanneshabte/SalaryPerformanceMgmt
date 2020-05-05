@@ -8,7 +8,12 @@ export default new Vuex.Store({
     state: {
         allEmployees: [],
         currentEmployee: null,
-        currentEmployeeID: 111111,
+        currentEmployeeID: null,
+    },
+    getters: {
+        currentEmployeeID: (state) => state.currentEmployeeID,
+        currentEmployee: (state) => state.currentEmployee,
+        allEmployees: (state) => state.allEmployees,
     },
     mutations: {
         SET_USER(state, payload) {
@@ -24,8 +29,10 @@ export default new Vuex.Store({
     actions: {
         changeEmployee({commit, dispatch}, payload) {
             commit("CHANGE_USER", payload);
-            dispatch('fetchEmployee');
-            dispatch('fetchAllEmployees');
+            if(this.state.currentEmployeeID != null) {
+                dispatch('fetchEmployee');
+                dispatch('fetchAllEmployees');
+            }
         },
         fetchEmployee({commit}) {
             axios({

@@ -43,7 +43,7 @@
     name: 'sidebar',
     data () {
       return {
-        dashboard: this.$route.path=='/dashboard'?false:true,
+        dashboard: this.$route.path=='/dashboard' || this.$route.path=='/auth' ?false:true,
         items: [
           { title: 'Dashboard', icon: 'mdi-view-dashboard', link: '/dashboard' },
           { title: 'Salary Budget', icon: 'mdi-chart-areaspline', link: '/budget' },
@@ -60,7 +60,7 @@
     },
     methods: {
       fetchData () {
-        this.dashboard = this.$route.path=='/dashboard'?false:true;
+        this.dashboard = this.$route.path=='/dashboard' || this.$route.path=='/auth' ?false:true;
       }
     }
   }

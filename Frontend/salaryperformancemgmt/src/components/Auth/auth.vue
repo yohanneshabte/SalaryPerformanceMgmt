@@ -1,16 +1,15 @@
 <template>
-  <v-app id="inspire">
     <v-content>
-        <v-row >
-          
-       
+        <v-row style="min-height: 800px">
+        <v-col cols="1">
+        </v-col>
         <v-col
-          cols="4"
+          cols="5"
           id="federated"
           align="center"
           justify="center"
         >
-          <v-card class="" style= "min-height: 100vh; background: linear-gradient(45deg, #080303 0%, #080303 0%, #000000 30%, #cc1616 100% );">
+          <v-card style= "min-height: 700px; background: linear-gradient(45deg, #080303 0%, #080303 0%, #000000 30%, #cc1616 100% );">
             <v-img 
               src ="./../../assets/logo.png"
               height="200"
@@ -21,45 +20,86 @@
           </v-card>
         </v-col>
         <v-col
-          cols="4"
+          cols="3"
           id="login"
+          class="pa-0"
         >
-          <v-card  style= "min-width: 80vh; min-height: 80vh">
-    
-              <v-card-text class="title text-center"> Employee Login
-                <v-form style="margin-top:70px">
+          <v-card style= "min-height: 700px" class="pa-6 ma-0">
+              <v-card-text class="text-center display-1 font-weight-light">EMPLOYEE PORTAL</v-card-text>
+              <v-card-text class="text-center headline font-weight-light">LOGIN</v-card-text>
+              
+                  <v-form
+                    ref="form"
+                    v-model="valid"
+                    lazy-validation
+                    style="margin-top:70px"
+                  >
+                  <v-alert type="error" border="left" dense v-show="error" class="mb-8" dismissible>
+                    Employee ID and Email doesn't match!
+                  </v-alert>
                   <v-text-field 
-                    label="Username"
-                    name="username"
-                    type="text"
-                  />
+                    v-model="email"
+                    label="Org. Email"
+                    name="email"
+                    type="email"
+                    :rules="emailRules"
+                    required
+                  ></v-text-field>
 
                   <v-text-field
+                    v-model="empID"
                     id="password"
-                    label="Password"
-                    name="password"
+                    label="Employee ID"
+                    name="empID"
                     type="password"
-                  />
+                    :rules="idRules"
+                    required
+                  ></v-text-field>
                 </v-form>
-              </v-card-text>
-              <v-card-actions style="margin-top: 40px; align:center">
+              
+                <v-card-actions style="margin-top: 40px; align:center">
                   <v-spacer />
-                <v-btn x-large color="rgba(171,26,37)" dark>Login</v-btn>
+                <v-btn x-large block color="rgba(171,26,37)" dark @click="validate">LOGIN</v-btn>
+                
               </v-card-actions>
+              <v-card-text class="text-center subtitle-1 font-weight-light">Forgot ID?</v-card-text>
           </v-card>
         </v-col>
-
-          
-        </v-row>
-    </v-content>
-    
-  </v-app>
+      </v-row>
+  </v-content>
 </template>
 
 <script>
   export default {
     props: {
       source: String,
+    },
+    data: () => ({
+      email: '',
+      empID: '',
+      error: false,
+      valid: false,
+      idRules: [
+        v => !!v || 'ID is required',
+        v => (v && v.length == 6) || 'ID must be 6 characters',
+      ],
+      emailRules: [
+        v => !!v || 'E-mail is required',
+        v => /.+@.+\..+/.test(v) || 'E-mail must be valid',
+      ],
+    }),
+    methods: {
+        validate () {
+          this.$refs.form.validate();
+          if(!this.error) {
+            this.$session.start();
+            this.$session.set('email', this.email);
+            this.$session.set('empID', this.empID);   
+            this.$router.push('/');
+          } else {
+            this.error = true;
+          }
+      }
     },
   }
 </script>
