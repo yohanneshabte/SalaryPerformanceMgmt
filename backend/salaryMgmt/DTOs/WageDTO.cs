@@ -5,7 +5,7 @@ using System.Threading.Tasks;
 
 namespace salaryMgmt.Models
 {
-    public class Wage
+    public class WageDTO
     {
         public int EMP_ID { get; set; }
         public float WAGE { get; set; }

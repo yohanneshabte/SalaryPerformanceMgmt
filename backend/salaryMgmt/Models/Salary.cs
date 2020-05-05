@@ -1,4 +1,5 @@
 ﻿using System;
+<<<<<<< HEAD
 using System.Data.SqlClient;
 using salaryMgmt.DTOs;
 using salaryMgmt.Config.Gateway;
@@ -14,10 +15,26 @@ namespace salaryMgmt.Models
         public PositionDTO position { get; set; }
         public PayRaiseDTO payRaise { get; set; }
 
+=======
+using System.Collections.Generic;
+using System.Linq;
+using System.Threading.Tasks;
+using System.Data;
+using System.Data.SqlClient;
+using salaryMgmt.DTOs;
+using salaryMgmt.Config.Gateway;
+
+namespace salaryMgmt.Models
+{
+    public class Salary
+    {
+        public SalaryDTO SalDTO { get; set; }
+>>>>>>> b55474b9e617de81789d23649bdd9aa40e8a0bc2
         private DatabaseGateway db;
 
         public Salary(int id)
         {
+<<<<<<< HEAD
             salary = new SalaryDTO();
             salaryRange = new SalaryRangeDTO();
             position = new PositionDTO();
@@ -45,6 +62,29 @@ namespace salaryMgmt.Models
                     payRaise.RAISE_DATE = sal.GetDateTime(sal.GetOrdinal("emp_start_date"));
             }
       
+=======
+            SalDTO = new SalaryDTO();
+            db = new DatabaseGateway();
+            SqlDataReader sal = GetDepartment(id);
+            while (sal.Read())
+            {
+                SalDTO.EMP_ID = sal.GetInt32(sal.GetOrdinal("emp_id"));
+                SalDTO.SALARY = sal.GetFloat(sal.GetOrdinal("SALARY"));
+
+            }
+        }
+
+
+        private SqlDataReader GetDepartment(int id)
+        {
+            SqlDataReader dr;
+            SqlCommand cmd = new SqlCommand("GetDepartmentByID", db.connection);
+            cmd.CommandType = CommandType.StoredProcedure;
+            cmd.Parameters.Add("@emp_id", SqlDbType.Int).Value = id;
+
+            dr = cmd.ExecuteReader();
+            return dr;
+>>>>>>> b55474b9e617de81789d23649bdd9aa40e8a0bc2
         }
     }
 }
