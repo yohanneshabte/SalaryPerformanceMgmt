@@ -1,5 +1,7 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Cors;
+using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
+using salaryMgmt.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -9,9 +11,12 @@ namespace salaryMgmt.Controllers
 {
     [ApiController]
     [Route("api/employee/{id}/salary")]
+    [EnableCors("MyPolicy")]
     public class SalaryController : ControllerBase
     {
-        //private Salary newSal;
+        private Salary salary;
+        private Salaries salaries;
+
         private readonly ILogger<SalaryController> _logger;
 
         public SalaryController(ILogger<SalaryController> logger)
@@ -20,21 +25,22 @@ namespace salaryMgmt.Controllers
         }
 
         [HttpGet]
-
-        public IActionResult GetSalary()
+        public IActionResult GetSalary(int id)
         {
-           // newSal = new Salary();
-            string[] results = { "200,000", "150,000", "50,000", "250,000", "50,000", "150,000 - 300,000"};
+            salary = new Salary(id);
+            //string[] results = { "200,000", "150,000", "50,000", "250,000", "50,000", "150,000 - 300,000"};
 
-            /*results[0] = newsSal.SalDTO.CurrentSalary;
-            results[1] = newSal.SalDTO.PreviousSalary;
-            results[2] = newSal.SalDTO.LastProjectedSalaryRaise;
-            results[3] = newSal.SalDTO.ProjectedSalary;
-            results[4] = newSal.SalDTO.ProjectedSalaryRaise;
-            results[5] = newSal.SalDto.SalaryRange;
-*/
-            return Ok("currentSalary:" + results[0] + ", previousSalary:" + results[1] + ", lastProSalRaise:"
-                    + results[2] + ", proSalary:" + results[3] + ", proSalRaise:" + results[4] + ", salRange:" + results[5]);
+            return Ok(salary);
+        }
+
+        [HttpGet]
+        [Route("all")]
+        public IActionResult GetAllSalary(int id)
+        {
+            salaries = new Salaries(id);
+            //string[] results = { "200,000", "150,000", "50,000", "250,000", "50,000", "150,000 - 300,000"};
+
+            return Ok(salaries.AllSalary);
         }
     }
 }

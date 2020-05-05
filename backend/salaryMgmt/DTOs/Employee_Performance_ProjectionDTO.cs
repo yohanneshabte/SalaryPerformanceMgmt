@@ -5,7 +5,8 @@ using System.Threading.Tasks;
 
 namespace salaryMgmt.Models
 {
-    public class Employee_Performance_Projection
+    [Serializable]
+    public class EmployeePerformanceProjectionDTO
     {
         public int EMP_ID { get; set; }
         public DateTime PROJ_DATE { get; set; }

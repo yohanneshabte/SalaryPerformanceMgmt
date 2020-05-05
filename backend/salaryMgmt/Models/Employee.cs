@@ -22,7 +22,7 @@ namespace salaryMgmt.Models
                 employee.DEP_ID = (int)emp.GetSqlInt32(emp.GetOrdinal("dep_id"));
                 employee.POS_ID = (int)emp.GetSqlInt32(emp.GetOrdinal("pos_id"));
                 employee.SUP_ID = (int)emp.GetSqlInt32(emp.GetOrdinal("sup_id"));
-                employee.EMP_FIRST_NAME = emp.GetString(emp.GetOrdinal("emp_first_name"));
+                employee.firstName = emp.GetString(emp.GetOrdinal("emp_first_name"));
                 employee.EMP_LAST_NAME = emp.GetString(emp.GetOrdinal("emp_last_name"));
                 employee.EMP_MIDDLE_NAME = emp.GetString(emp.GetOrdinal("emp_middle_initial"));
                 employee.EMP_SSN = emp.GetString(emp.GetOrdinal("emp_ssn"));

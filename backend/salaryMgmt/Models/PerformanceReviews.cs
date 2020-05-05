@@ -6,21 +6,22 @@ using System.Data.SqlClient;
 
 namespace salaryMgmt.Models
 {
-    public class Employees
+    public class PerformanceReviews
     {
-        public List<Employee> AllEmps = new List<Employee>();
+        public List<PerformanceReview> AllPR = new List<PerformanceReview>();
 
-        public Employees(int id)
+        public PerformanceReviews(int id)
         {
             DatabaseGateway db = new DatabaseGateway();
-            SqlDataReader emp = db.GetAllEmployees(id);
+
+            SqlDataReader emp = db.GetAllPR(id);
             while (emp.Read())
             {
                 int emp_id = (int)emp.GetSqlInt32(emp.GetOrdinal("emp_id"));
 
-                Employee myEmp = new Employee(emp_id);
+                PerformanceReview pr = new PerformanceReview(emp_id);
 
-                AllEmps.Add(myEmp);
+                AllPR.Add(pr);
             }
         }
     }

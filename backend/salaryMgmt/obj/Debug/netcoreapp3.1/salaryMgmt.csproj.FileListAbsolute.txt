@@ -81,3 +81,32 @@ C:/Users/Sol/Desktop/salaryMgmt/salaryMgmt/obj/Debug/netcoreapp3.1/salaryMgmt.pd
 /Users/user2/Documents/2020/IT380/SalaryPerformanceMgmt/backend/salaryMgmt/obj/Debug/netcoreapp3.1/salaryMgmt.pdb
 /Users/user2/Documents/2020/IT380/SalaryPerformanceMgmt/backend/salaryMgmt/obj/Debug/netcoreapp3.1/salaryMgmt.genruntimeconfig.cache
 /Users/user2/Documents/2020/IT380/SalaryPerformanceMgmt/backend/salaryMgmt/bin/Debug/netcoreapp3.1/Json.Net.dll
+/Users/user2/Downloads/SalaryPerformanceMgmt-backend-v0.2-dev 2/backend/salaryMgmt/bin/Debug/netcoreapp3.1/appsettings.Development.json
+/Users/user2/Downloads/SalaryPerformanceMgmt-backend-v0.2-dev 2/backend/salaryMgmt/bin/Debug/netcoreapp3.1/appsettings.json
+/Users/user2/Downloads/SalaryPerformanceMgmt-backend-v0.2-dev 2/backend/salaryMgmt/bin/Debug/netcoreapp3.1/Properties/launchSettings.json
+/Users/user2/Downloads/SalaryPerformanceMgmt-backend-v0.2-dev 2/backend/salaryMgmt/bin/Debug/netcoreapp3.1/salaryMgmt.deps.json
+/Users/user2/Downloads/SalaryPerformanceMgmt-backend-v0.2-dev 2/backend/salaryMgmt/bin/Debug/netcoreapp3.1/salaryMgmt.runtimeconfig.json
+/Users/user2/Downloads/SalaryPerformanceMgmt-backend-v0.2-dev 2/backend/salaryMgmt/bin/Debug/netcoreapp3.1/salaryMgmt.runtimeconfig.dev.json
+/Users/user2/Downloads/SalaryPerformanceMgmt-backend-v0.2-dev 2/backend/salaryMgmt/bin/Debug/netcoreapp3.1/salaryMgmt.dll
+/Users/user2/Downloads/SalaryPerformanceMgmt-backend-v0.2-dev 2/backend/salaryMgmt/bin/Debug/netcoreapp3.1/salaryMgmt.pdb
+/Users/user2/Downloads/SalaryPerformanceMgmt-backend-v0.2-dev 2/backend/salaryMgmt/bin/Debug/netcoreapp3.1/Json.Net.dll
+/Users/user2/Downloads/SalaryPerformanceMgmt-backend-v0.2-dev 2/backend/salaryMgmt/bin/Debug/netcoreapp3.1/Newtonsoft.Json.dll
+/Users/user2/Downloads/SalaryPerformanceMgmt-backend-v0.2-dev 2/backend/salaryMgmt/bin/Debug/netcoreapp3.1/System.Data.SqlClient.dll
+/Users/user2/Downloads/SalaryPerformanceMgmt-backend-v0.2-dev 2/backend/salaryMgmt/bin/Debug/netcoreapp3.1/Microsoft.WindowsAzure.Storage.dll
+/Users/user2/Downloads/SalaryPerformanceMgmt-backend-v0.2-dev 2/backend/salaryMgmt/bin/Debug/netcoreapp3.1/runtimes/win-arm64/native/sni.dll
+/Users/user2/Downloads/SalaryPerformanceMgmt-backend-v0.2-dev 2/backend/salaryMgmt/bin/Debug/netcoreapp3.1/runtimes/win-x64/native/sni.dll
+/Users/user2/Downloads/SalaryPerformanceMgmt-backend-v0.2-dev 2/backend/salaryMgmt/bin/Debug/netcoreapp3.1/runtimes/win-x86/native/sni.dll
+/Users/user2/Downloads/SalaryPerformanceMgmt-backend-v0.2-dev 2/backend/salaryMgmt/bin/Debug/netcoreapp3.1/runtimes/unix/lib/netcoreapp2.1/System.Data.SqlClient.dll
+/Users/user2/Downloads/SalaryPerformanceMgmt-backend-v0.2-dev 2/backend/salaryMgmt/bin/Debug/netcoreapp3.1/runtimes/win/lib/netcoreapp2.1/System.Data.SqlClient.dll
+/Users/user2/Downloads/SalaryPerformanceMgmt-backend-v0.2-dev 2/backend/salaryMgmt/obj/Debug/netcoreapp3.1/salaryMgmt.csprojAssemblyReference.cache
+/Users/user2/Downloads/SalaryPerformanceMgmt-backend-v0.2-dev 2/backend/salaryMgmt/obj/Debug/netcoreapp3.1/salaryMgmt.csproj.CoreCompileInputs.cache
+/Users/user2/Downloads/SalaryPerformanceMgmt-backend-v0.2-dev 2/backend/salaryMgmt/obj/Debug/netcoreapp3.1/salaryMgmt.MvcApplicationPartsAssemblyInfo.cache
+/Users/user2/Downloads/SalaryPerformanceMgmt-backend-v0.2-dev 2/backend/salaryMgmt/obj/Debug/netcoreapp3.1/salaryMgmt.AssemblyInfoInputs.cache
+/Users/user2/Downloads/SalaryPerformanceMgmt-backend-v0.2-dev 2/backend/salaryMgmt/obj/Debug/netcoreapp3.1/salaryMgmt.AssemblyInfo.cs
+/Users/user2/Downloads/SalaryPerformanceMgmt-backend-v0.2-dev 2/backend/salaryMgmt/obj/Debug/netcoreapp3.1/salaryMgmt.RazorTargetAssemblyInfo.cache
+/Users/user2/Downloads/SalaryPerformanceMgmt-backend-v0.2-dev 2/backend/salaryMgmt/obj/Debug/netcoreapp3.1/salaryMgmt.csproj.CopyComplete
+/Users/user2/Downloads/SalaryPerformanceMgmt-backend-v0.2-dev 2/backend/salaryMgmt/obj/Debug/netcoreapp3.1/staticwebassets/salaryMgmt.StaticWebAssets.Manifest.cache
+/Users/user2/Downloads/SalaryPerformanceMgmt-backend-v0.2-dev 2/backend/salaryMgmt/obj/Debug/netcoreapp3.1/staticwebassets/salaryMgmt.StaticWebAssets.xml
+/Users/user2/Downloads/SalaryPerformanceMgmt-backend-v0.2-dev 2/backend/salaryMgmt/obj/Debug/netcoreapp3.1/salaryMgmt.dll
+/Users/user2/Downloads/SalaryPerformanceMgmt-backend-v0.2-dev 2/backend/salaryMgmt/obj/Debug/netcoreapp3.1/salaryMgmt.pdb
+/Users/user2/Downloads/SalaryPerformanceMgmt-backend-v0.2-dev 2/backend/salaryMgmt/obj/Debug/netcoreapp3.1/salaryMgmt.genruntimeconfig.cache

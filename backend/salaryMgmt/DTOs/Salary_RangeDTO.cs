@@ -5,7 +5,8 @@ using System.Threading.Tasks;
 
 namespace salaryMgmt.Models
 {
-    public class Salary_Range
+    [Serializable]
+    public class SalaryRangeDTO
     {
         public int POS_ID { get; set; }
         public float POS_SALARY { get; set; }

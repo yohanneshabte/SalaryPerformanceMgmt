@@ -33,6 +33,7 @@ namespace salaryMgmt.Config.Gateway
             connection.Close();
         }
 
+        //employee
         public SqlDataReader GetEmployee(int id)
         {
             SqlDataReader dr;
@@ -48,6 +49,86 @@ namespace salaryMgmt.Config.Gateway
         {
             SqlDataReader dr;
             SqlCommand cmd = new SqlCommand("GetEmployeesByID", this.connection);
+            cmd.CommandType = CommandType.StoredProcedure;
+            cmd.Parameters.Add("@emp_id", SqlDbType.Int).Value = id;
+
+            dr = cmd.ExecuteReader();
+            return dr;
+        }
+
+
+
+        //salary
+        public SqlDataReader GetSalary(int id)
+        {
+            SqlDataReader dr;
+            SqlCommand cmd = new SqlCommand("EmployeeSalaryByID", this.connection);
+            cmd.CommandType = CommandType.StoredProcedure;
+            cmd.Parameters.Add("@emp_id", SqlDbType.Int).Value = id;
+
+            dr = cmd.ExecuteReader();
+            return dr;
+        }
+        public SqlDataReader GetAllSalary(int id)
+        {
+            SqlDataReader dr;
+            SqlCommand cmd = new SqlCommand("EmployeeSalaryBySupID", this.connection);
+            cmd.CommandType = CommandType.StoredProcedure;
+            cmd.Parameters.Add("@emp_id", SqlDbType.Int).Value = id;
+
+            dr = cmd.ExecuteReader();
+            return dr;
+        }
+
+
+        //PR
+        public SqlDataReader GetPR(int id)
+        {
+            SqlDataReader dr;
+            SqlCommand cmd = new SqlCommand("EmployeePRByID", this.connection);
+            cmd.CommandType = CommandType.StoredProcedure;
+            cmd.Parameters.Add("@emp_id", SqlDbType.Int).Value = id;
+
+            dr = cmd.ExecuteReader();
+            return dr;
+        }
+        public SqlDataReader GetAllPR(int id)
+        {
+            SqlDataReader dr;
+            SqlCommand cmd = new SqlCommand("EmployeePRBySupID", this.connection);
+            cmd.CommandType = CommandType.StoredProcedure;
+            cmd.Parameters.Add("@emp_id", SqlDbType.Int).Value = id;
+
+            dr = cmd.ExecuteReader();
+            return dr;
+        }
+        public SqlDataReader GetPRDetail(int id)
+        {
+            SqlDataReader dr;
+            SqlCommand cmd = new SqlCommand("EmployeePRDetailByID", this.connection);
+            cmd.CommandType = CommandType.StoredProcedure;
+            cmd.Parameters.Add("@per_rev_id", SqlDbType.Int).Value = id;
+
+            dr = cmd.ExecuteReader();
+            return dr;
+        }
+
+
+        //PP
+        public SqlDataReader GetPP(int id)
+        {
+            SqlDataReader dr;
+            SqlCommand cmd = new SqlCommand("EmployeePPByID", this.connection);
+            cmd.CommandType = CommandType.StoredProcedure;
+            cmd.Parameters.Add("@emp_id", SqlDbType.Int).Value = id;
+
+            dr = cmd.ExecuteReader();
+            return dr;
+        }
+        public SqlDataReader GetAllPP(int id)
+        {
+            SqlDataReader dr;
+            SqlCommand cmd = new SqlCommand("EmployeePPBySupID", this.connection);
             cmd.CommandType = CommandType.StoredProcedure;
             cmd.Parameters.Add("@emp_id", SqlDbType.Int).Value = id;
 

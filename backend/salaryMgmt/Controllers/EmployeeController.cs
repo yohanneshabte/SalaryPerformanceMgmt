@@ -9,11 +9,13 @@ using salaryMgmt.Models;
 using Microsoft.AspNetCore.Http;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Serialization;
+using Microsoft.AspNetCore.Cors;
 
 namespace salaryMgmt.Controllers
 {
     [ApiController]
     [Route("api/employee/")]
+    [EnableCors("MyPolicy")]
     public class EmployeeController : ControllerBase
     {
         private Employee newEmp;
@@ -30,11 +32,10 @@ namespace salaryMgmt.Controllers
         [Route("{id}")]
         public IActionResult GetEmployee(int id)
         {
-            //newEmp = new Employee(id);
-            string[] results = { "Janet", "Townsend", "C.", "3244 Lake Street", "432-54-2355", "janettownsend@federated.com", "Supervisor", "SC+", "$125,000" };
+            //string[] results = { "Janet", "Townsend", "C.", "3244 Lake Street", "432-54-2355", "janettownsend@federated.com", "Supervisor", "SC+", "$125,000" };
             newEmp = new Employee(id);
 
-            return Ok(newEmp);
+            return Ok(newEmp.employee);
 
         }
 
@@ -42,11 +43,9 @@ namespace salaryMgmt.Controllers
         [Route("{id}/all")]
         public IActionResult GetMyEmployees(int id)
         {
-            //newEmp = new Employee(id);
-            
             myEmployees = new Employees(id);
 
-            return Ok(myEmployees);
+            return Ok(myEmployees.AllEmps);
 
         }
 
