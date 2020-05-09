@@ -1,0 +1,130 @@
+DROP TABLE IF EXISTS [performance rating],[employee_performance_projection],[pay_raise], 
+                     [employee_performance_review], [salary_range],
+                     [salary], [employee], 
+                     [wage], [merit guidelines], 
+                     [position], [performance factors], [wage_range], [department];
+
+CREATE TABLE [performance rating] (
+  [rating_id] int,
+  [rating_name] varchar(50),
+  [rating_desc] varchar(150),
+  PRIMARY KEY ([rating_id])
+);
+
+CREATE TABLE [employee_performance_projection] (
+  [emp_id] int,
+  [proj_date] date,
+  [rating_id] int
+);
+
+CREATE INDEX [FK] ON  [employee_performance_projection] ([emp_id], [rating_id]);
+
+CREATE TABLE [pay_raise] (
+  [emp_raise_id] int,
+  [emp_id] int,
+  [emp_per_rev] int,
+  [raise_amount] float,
+  [raise_date] date,
+  PRIMARY KEY ([emp_raise_id])
+);
+
+CREATE INDEX [FK] ON  [pay_raise] ([emp_id], [emp_per_rev]);
+
+CREATE TABLE [employee_performance_review] (
+  [emp_per_rev] int,
+  [emp_id] int,
+  [review_date] date,
+  [previous_review] varchar(50),
+  [performance_feedback] varchar(50),
+  [dep_id] int,
+  [rating_id] int,
+  [per_fact_id] int,
+  [merit_id] int,
+  PRIMARY KEY ([emp_per_rev])
+);
+
+CREATE INDEX [FK] ON  [employee_performance_review] ([emp_id], [dep_id], [rating_id], [per_fact_id], [merit_id]);
+
+CREATE TABLE [salary_range] (
+  [pos_id] int,
+  [pos_salary] float,
+  [salary_max] float,
+  [salary_min] float
+);
+
+CREATE INDEX [PK,FK] ON  [salary_range] ([pos_id]);
+
+CREATE TABLE [salary] (
+  [emp_id] int,
+  [salary] float
+);
+
+CREATE INDEX [PK,FK] ON  [salary] ([emp_id]);
+
+CREATE TABLE [employee] (
+  [emp_id] int,
+  [sup_id] int,
+  [emp_first_name] varchar(50),
+  [emp_middle_initial] varchar(1),
+  [emp_last_name] varchar(50),
+  [emp_address] varchar(50),
+  [emp_ssn] varchar(50),
+  [emp_cell] varchar(50),
+  [emp_email] varchar(50),
+  [emp_start_date] date,
+  [emp_end_date] date,
+  [emp_profile_pic] varchar(200),
+  [pos_id] int,
+  [dep_id] int,
+  [pay_type] char(1),
+  PRIMARY KEY ([emp_id])
+);
+
+CREATE INDEX [FK] ON  [employee] ([pos_id], [dep_id]);
+
+CREATE TABLE [wage] (
+  [emp_id] int,
+  [wage] float,
+  [wage_hours] float
+);
+
+CREATE INDEX [PK,FK] ON  [wage] ([emp_id]);
+
+CREATE TABLE [merit guidelines] (
+  [merit_id] int,
+  [raise_min] float,
+  [raise_max] float,
+  [raise_target] float,
+  PRIMARY KEY ([merit_id])
+);
+
+CREATE TABLE [position] (
+  [pos_id] int,
+  [pos_title] varchar(50),
+  [pos_pay_type] char(1),
+  PRIMARY KEY ([pos_id])
+);
+
+CREATE TABLE [performance factors] (
+  [per_fact_id] int,
+  [factor_name] varchar(50),
+  [factor_dimensions] varchar(500),
+  [factor_catagory] varchar(50),
+  PRIMARY KEY ([per_fact_id])
+);
+
+CREATE TABLE [wage_range] (
+  [pos_id] int,
+  [pos_wage] float,
+  [wage_max] float,
+  [wage_min] float,
+  [wage_hours] float
+);
+
+CREATE INDEX [PK,FK] ON  [wage_range] ([pos_id]);
+
+CREATE TABLE [department] (
+  [dep_id] int,
+  [dep_name] varchar(50),
+  PRIMARY KEY ([dep_id])
+);
